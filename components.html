@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Diseño - SmartSip</title>
+    <meta name="description" content="Guía de estilo y sistema de diseño basado en Custom Properties.">
+    <link rel="stylesheet" href="components.css">
+</head>
+<body>
+
+    <header>
+        <strong>SmartSip - Guía de Estilos</strong>
+    </header>
+
+    <main class="contenedor">
+        <div class="guia-header">
+            <h2>Sistema de Diseño</h2>
+            <p>Visualización de las Custom Properties y Componentes aplicados.</p>
+        </div>
+
+        <div class="grid-diseno">
+            <div class="tarjeta-diseno">
+                <h3>Paleta de Colores</h3>
+                <div class="paleta-colores">
+                    <div class="color-box" style="background-color: var(--color-primario); color: white;">Primario</div>
+                    <div class="color-box" style="background-color: var(--color-secundario); color: white;">Secundario</div>
+                    <div class="color-box" style="background-color: var(--color-fondo-alterno);">Fondo Alt.</div>
+                    <div class="color-box" style="background-color: var(--color-texto); color: white;">Texto</div>
+                </div>
+            </div>
+
+            <div class="tarjeta-diseno">
+                <h3>Tipografía y Espaciado</h3>
+                <p style="margin-bottom: var(--espaciado-pequeno);"><strong>Fuente:</strong> var(--fuente-principal)</p>
+                <p style="margin-bottom: var(--espaciado-pequeno);"><strong>Espaciado base:</strong> 1rem (16px)</p>
+                <p><strong>Radio de borde:</strong> var(--radio-borde) (8px)</p>
+                
+                <div style="margin-top: var(--espaciado-mediano); border: 1px dashed var(--color-primario); padding: var(--espaciado-grande); text-align: center;">
+                    Caja con --espaciado-grande (2rem)
+                </div>
+            </div>
+
+            <div class="tarjeta-diseno">
+                <h3>Componentes: Botones</h3>
+                <div style="display: flex; flex-direction: column; gap: var(--espaciado); align-items: flex-start;">
+                    <button class="btn-primario">Botón Primario (.btn-primario)</button>
+                    <button class="btn-secundario">Botón Secundario (.btn-secundario)</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-diseno">
+                <h3>Componentes: Formulario</h3>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Label de ejemplo</label>
+                    <input type="text" placeholder="Input con focus interactivo" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--espaciado-xl);">
+            <a href="index.html" class="btn-secundario">← Volver a la Landing Page</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SmartSip Inc. Guía de componentes.</p>
+    </footer>
+
+</body>
+</html>

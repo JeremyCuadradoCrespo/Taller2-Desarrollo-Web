@@ -1,0 +1,185 @@
+
+        :root {
+            --color-primario: #E67E22;
+            --color-primario-oscuro: #D35400;
+            --color-secundario: #2C3E50;
+            --color-fondo: #FDFEFE;
+            --color-texto: #333333;
+            --color-blanco: #FFFFFF;
+            --color-borde: #E5E7E9;
+            
+
+            --espaciado-pequeno: 0.5rem;
+            --espaciado: 1rem;
+            --espaciado-mediano: 1.5rem;
+            --espaciado-grande: 2rem;
+            --espaciado-xl: 4rem;
+
+
+            --radio-borde: 8px;
+            --fuente-principal: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--fuente-principal);
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            padding: var(--espaciado-mediano);
+            text-align: center;
+        }
+
+        main {
+            padding: var(--espaciado-grande) var(--espaciado);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radio-borde);
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: var(--espaciado-grande);
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            margin-top: var(--espaciado-xl);
+        }
+
+
+        .hero-section {
+            display: flex;
+            flex-direction: column; 
+            gap: var(--espaciado-grande);
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            color: var(--color-secundario);
+            font-size: 2.5rem;
+            margin-bottom: var(--espaciado);
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: var(--espaciado-grande);
+            color: #555;
+        }
+
+        #formulario-reserva {
+            background-color: var(--color-blanco);
+            padding: var(--espaciado-grande);
+            border-radius: var(--radio-borde);
+            border: 1px solid var(--color-borde);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        #formulario-reserva h2 {
+            margin-bottom: var(--espaciado-mediano);
+            color: var(--color-secundario);
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: var(--espaciado-mediano);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: var(--espaciado-pequeno);
+            font-weight: 600;
+        }
+
+        .form-group input {
+            padding: 0.75rem;
+            border: 1px solid var(--color-borde);
+            border-radius: var(--radio-borde);
+            font-family: var(--fuente-principal);
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--color-primario);
+        }
+
+        .btn-primario {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            border: none;
+            padding: var(--espaciado) var(--espaciado-grande);
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: var(--radio-borde);
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-primario:hover {
+            background-color: var(--color-primario-oscuro);
+        }
+
+        .btn-secundario {
+            background-color: transparent;
+            color: var(--color-secundario);
+            border: 2px solid var(--color-secundario);
+            padding: var(--espaciado) var(--espaciado-grande);
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: var(--radio-borde);
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: var(--espaciado);
+            width: 100%;
+        }
+
+        .btn-secundario:hover {
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+        }
+
+        @media (min-width: 768px) {
+            .hero-section {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .hero-text {
+                flex: 1; 
+                padding-right: var(--espaciado-xl);
+            }
+
+            .hero-image {
+                flex: 1; 
+            }
+
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+        }
